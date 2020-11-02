@@ -245,7 +245,7 @@ class Twitter extends tmhOAuth
     {
         $this->config['host'] = $this->tconfig['API_URL'];
 
-        if ($multipart) {
+        if ($multipart || $name == 'media/upload') {
             $this->config['host'] = $this->tconfig['UPLOAD_URL'];
         }
 
